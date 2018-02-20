@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 public class FirstTest {
     @Test
     public void firstTest() {
-        System.setProperty("webdriver.chrome.driver", "/home/lugovskoy/IdeaProjects/practicalLessons/src/test/resources/chromedriver");
+
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 
@@ -39,7 +40,8 @@ public class FirstTest {
 
     @Test
     public void secondTest() {
-        System.setProperty("webdriver.gecko.driver", "/home/lugovskoy/IdeaProjects/practicalLessons/src/test/resources/geckodriver");
+
+        System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver");
 
         WebDriver driver = new FirefoxDriver();
 

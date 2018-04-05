@@ -1,4 +1,4 @@
-package lessons.lesson2;
+package lessons;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class FirstTest {
     @Test
-    public void firstTest() {
+    public void chromeTest() {
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
 
@@ -21,6 +21,10 @@ public class FirstTest {
         driver.get("https://promin.stage.it.loc/ProminShellClient");
 
         driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
+
+
+        driver.manage().timeouts().setScriptTimeout(3000, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().pageLoadTimeout(3000, TimeUnit.MILLISECONDS);
 
         WebElement fieldLogin = driver.findElement(By.name("login"));
 
@@ -39,7 +43,7 @@ public class FirstTest {
     }
 
     @Test
-    public void secondTest() {
+    public void firefoxTest() {
 
         System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver");
 
